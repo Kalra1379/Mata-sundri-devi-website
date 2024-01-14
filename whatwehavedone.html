@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<head>
+    <title>MATA SUNDER DEVI TRUST</title>
+
+    <!--META TAGS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="About The Organization">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+
+    <!--EXTERNAL CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="lightbox.min.css">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Kanit:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+    <style>
+        .section ul {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .section ul li {
+            list-style: none;
+            background: #eee;
+            padding: 8px 20px;
+            margin: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        
+        .section ul li.active {
+            background: green;
+            color: white;
+        }
+        
+        .text-container h3 {
+            color: green;
+        }
+        
+        .zoom:hover {
+            transform: scale(1.5);
+        }
+        
+        a.btn {
+            background: green;
+            border-radius: 4px;
+            box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            display: inline-block;
+            padding: 6px 30px 8px;
+            position: relative;
+            text-decoration: none;
+            transition: all 0.1s 0s ease-out;
+        }
+        
+        .no-touch a.btn:hover {
+            background: #00a2ad;
+            box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+            transform: translateY(-2px);
+            transition: all 0.25s 0s ease-out;
+        }
+        
+        .no-touch a.btn:active,
+        a.btn:active {
+            background: #008a93;
+            box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+            transform: translate3d(0, 1px, 0);
+            transition: all 0.025s 0s ease-out;
+        }
+        
+        div.cards {
+            margin: 30px 30px;
+            padding-left: 50px;
+            max-width: 2000px;
+            /* text-align: center; */
+        }
+        
+        div.card {
+            background: #ffffff;
+            display: inline-block;
+            margin: 8px;
+            max-width: 250px;
+            perspective: 1000;
+            position: relative;
+            text-align: left;
+            transition: all 0.3s 0s ease-in;
+            width: 250px;
+            z-index: 1;
+        }
+        
+        div.card img {
+            max-width: 250px;
+        }
+        
+        div.card .card__image-holder {
+            background: rgba(0, 0, 0, 0.1);
+            height: 0;
+            padding-bottom: 75%;
+        }
+        
+        div.card div.card-title {
+            background: #ffffff;
+            padding-top: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            z-index: 0;
+        }
+        
+        div.card div.card-title a.toggle-info {
+            border-radius: 32px;
+            height: 32px;
+            padding: 0;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 32px;
+        }
+        
+        div.card div.card-title a.toggle-info span {
+            background: #ffffff;
+            display: block;
+            height: 2px;
+            position: absolute;
+            top: 16px;
+            transition: all 0.15s 0s ease-out;
+            width: 12px;
+        }
+        
+        div.card div.card-title a.toggle-info span.left {
+            right: 14px;
+            transform: rotate(45deg);
+        }
+        
+        div.card div.card-title a.toggle-info span.right {
+            left: 14px;
+            transform: rotate(-45deg);
+        }
+        
+        div.card div.card-title h2 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            margin: 0;
+            padding: 0;
+        }
+        
+        div.card div.card-title h2 small {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+        
+        div.card div.card-description {
+            padding: 0 15px 10px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        div.card div.card-actions {
+            box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+            padding: 10px 15px 20px;
+            text-align: center;
+        }
+        
+        div.card div.card-flap {
+            background: #d9d9d9;
+            position: absolute;
+            width: 100%;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        
+        div.card div.flap1 {
+            transition: all 0.3s 0.3s ease-out;
+            z-index: -1;
+        }
+        
+        div.card div.flap2 {
+            transition: all 0.3s 0s ease-out;
+            z-index: -2;
+        }
+        
+        div.cards.showing div.card {
+            cursor: pointer;
+            opacity: 0.6;
+            transform: scale(0.88);
+        }
+        
+        .no-touch div.cards.showing div.card:hover {
+            opacity: 0.94;
+            transform: scale(0.92);
+        }
+        
+        div.card.show {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+        }
+        
+        div.card.show div.card-title a.toggle-info {
+            background: #ff6666 !important;
+        }
+        
+        div.card.show div.card-title a.toggle-info span {
+            top: 15px;
+        }
+        
+        div.card.show div.card-title a.toggle-info span.left {
+            right: 10px;
+        }
+        
+        div.card.show div.card-title a.toggle-info span.right {
+            left: 10px;
+        }
+        
+        div.card.show div.card-flap {
+            background: #ffffff;
+            transform: rotateX(0deg);
+        }
+        
+        div.card.show div.flap1 {
+            transition: all 0.3s 0s ease-out;
+        }
+        
+        div.card.show div.flap2 {
+            transition: all 0.3s 0.2s ease-out;
+        }
+        
+        @media screen and (max-width: 400px) {
+            div.cards {
+                padding-left: 20px;
+            }
+        }
+        
+        .container5 .new-card {
+            max-width: 250px;
+            max-height: 250px;
+        }
+        
+        .container5 .new-card {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!--NAVIGATION-->
+        <div class="topnav" id="myTopnav">
+            <a href="Index.html" id="logo"><img src="images\Screenshot 2024-01-08 213008.png"></a>
+            <a href="about.html" class="animate" style="font-weight: bold;">About Us</a>
+            <a href="contact.html" class="animate">Contact Us</a>
+            <a href="team.html" class="animate">Team</a>
+            <a href="#" class="animate active">Our Projects</a>
+            <a href="Index.html" class="animate">Home</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </header>
+
+    <div id="navbar">
+        <a href="Index.html" id="logo"><img src="images\Screenshot 2024-01-08 213008.png"></a>
+        <a href="about.html" class="animate">About Us</a>
+        <a href="contact.html" class="animate">Contact Us</a>
+        <a href="team.html" class="animate">Team</a>
+        <a href="whatwehavedone.html" class="animate active">Our Projects</a>
+        <a href="Index.html" class="animate">Home</a>
+    </div>
+    <br>
+    <div class="section">
+        <ul style="justify-content: center;">
+            <li class="list" data-filter="All" style="border-radius: 20px; background-color: green;">All</li>
+            <div class="dropdown show">
+                <li class="list btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-filter="All" style="border-radius: 20px; background-color: green;">Year-wise</li>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item list" data-filter="2021" href="#">2021</a>
+                    <a class="dropdown-item list" data-filter="2020" href="#">2020</a>
+                    <a class="dropdown-item list" data-filter="2019" href="#">2019</a>
+                    <a class="dropdown-item list" data-filter="2018" href="#">2018</a>
+                    <a class="dropdown-item list" data-filter="2017" href="#">2017</a>
+                    <a class="dropdown-item list" data-filter="2016" href="#">2016</a>
+                    <a class="dropdown-item list" data-filter="2015" href="#">2015</a>
+                </div>
+            </div>
+            <div class="dropdown show">
+                <li class="list btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-filter="All" style="border-radius: 20px; background-color: green;">City-wise</li>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item list" data-filter="Rewari" href="#">Rewari</a>
+                    <a class="dropdown-item list" data-filter="Radaur" href="#">Radaur</a>
+                    <a class="dropdown-item list" data-filter="Yamuna-nagar" href="#">Yamuna- Nagar</a>
+                    <a class="dropdown-item list" data-filter="Ladwa" href="#">Ladwa</a>
+                    <a class="dropdown-item list" data-filter="Ismailabad" href="#">Ismailabad(Kurukshetra)</a>
+                </div>
+            </div>
+        </ul>
+
+
+        <div class="container5">
+
+            <div class="row">
+                <div class="cards">
+                    <div href="images\pexels-photo-7578803.webp" class="card Rewari 2015">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-7578803.webp" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-7578803.webp" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Full Body CheckUp <br>By Specialist</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                Our full body checkup thoroughly evaluates individual health status and disease risk factors, providing personalized wellness advice. This comprehensive screening fosters early illness detection and prevention among underserved communities lacking access
+                                to routine healthcare.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div href="images\pexels-photo-7581074.webp" class="card Rewari 2015">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-7581074.webp" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-7581074.webp" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Physiotherapy <br> Expert</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                Licensed professionals who provide physical rehabilitation services to help patients recover movement and manage pain after injury or illness.
+                            </div>
+                        </div>
+                    </div>
+                    <div href="images\pexels-photo-19764018.webp" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-19764018.webp" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-19764018.webp" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Dental Checkup <br> By Dental Expert</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We offer pro bono dental checkups and preventative oral healthcare service to disadvantaged individuals in the community lacking access to routine dental care. Treatment focuses on examination and cleaning, extractions when necessary, and patient education
+                                to promote long-term dental health.</div>
+                        </div>
+                    </div>
+                    <div href="images\download.jpg" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\download.jpg" data-lightbox="image-1"><img class="new-card" src="images\download.jpg" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Skin Care By Skin Specialist</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We provide specialized dermatological care to underprivileged groups lacking access to skin healthcare. Services focus on examination, treatment, education, and empowering at-risk communities to prevent and manage chronic skin diseases associated with
+                                poverty and malnutrition.</div>
+                        </div>
+                    </div>
+                    <div href="images\pexels-photo-6749710.jpg" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-6749710.jpg" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-6749710.jpg" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Eye CheckUp <br> By Eye Specialist</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We offer free comprehensive eye exams and affordable corrective eyewear, leveraging donations and volunteers to provide essential vision care to underprivileged groups lacking financial access. Services focus on testing, prescription fittings, and equipping
+                                patients to promote long-term ocular health.</div>
+                        </div>
+                    </div>
+
+                    <div href="images\pregnantbelly-12846ccc8700426898a531e2cebc322b.jpg" class="card Ismailabad 2020">
+                        <div class="card__image-holder">
+                            <a href="images\pregnantbelly-12846ccc8700426898a531e2cebc322b.jpg" data-lightbox="image-1"><img class="new-card" src="images\pregnantbelly-12846ccc8700426898a531e2cebc322b.jpg" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Pregrency Test <br>By Expert
+                            </h5>
+                            <p>Venue: Mehrauli Delhi
+                            </p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                A pregnancy test checks urine or blood for the pregnancy hormone hCG to determine if a woman is expecting. Results in under a minute. Accuracy varies by how soon after conception it's taken.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div href="images\pexels-photo-4021775.jpg" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-4021775.jpg" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-4021775.jpg" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Doctor Full Body <br>CheckUp</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                A comprehensive health examination that evaluates the current functioning of all major organ systems and provides preventative recommendations to proactively monitor wellbeing
+                            </div>
+                        </div>
+                    </div>
+
+                    <div href="images\xray.webp" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\xray.webp" data-lightbox="image-1"><img class="new-card" src="images\xray.webp" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">X-Rays Facilities <br>CheckUp</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We provide free radiology services, including X-rays, to marginalized communities lacking access to advanced diagnostics for acute and chronic ailments. Imaging facilitates early illness detection and appropriate treatment, while protecting families already
+                                burdened by poverty from avoidable medical costs.</div>
+                        </div>
+                    </div>
+
+                    <div href="images\pexels-photo-7526062.webp" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-7526062.webp" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-7526062.webp" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Auruyvedic Treatment. <br>CheckUp</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We provide customized Ayurvedic therapies using natural herbal formulations and traditional techniques to boost wellness and address chronic diseases in low-income communities lacking access to holistic healing modalities outside allopathy. Treatments
+                                balance doshas to restore mind/body health.</div>
+                        </div>
+                    </div>
+
+                    <div href="images\Shoulder-treatment-wall-frame-removed1.webp" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\Shoulder-treatment-wall-frame-removed1.webp" data-lightbox="image-1"><img class="new-card" src="images\Shoulder-treatment-wall-frame-removed1.webp" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Sholder Treatment <br>CheckUp</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We offer customized physical therapy and noninvasive treatments for shoulder injuries and chronic conditions among at-risk communities lacking access to rehabilitation services. With a combination of exercises, manual therapy, and education, we aim to
+                                relieve pain, restore mobility, and prevent unnecessary disability.</div>
+                        </div>
+                    </div>
+
+                    <div href="images\pexels-photo-8260436.jpg" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-8260436.jpg" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-8260436.jpg" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">X-Rays Facilities <br>CheckUp</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We provide free radiology services, including X-rays, to marginalized communities lacking access to advanced diagnostics for acute and chronic ailments. Imaging facilitates early illness detection and appropriate treatment, while protecting families already
+                                burdened by poverty from avoidable medical costs.</div>
+                        </div>
+                    </div>
+
+
+                    <div href="images\pexels-photo-3757942.webp" class="card Rewari 2016">
+                        <div class="card__image-holder">
+                            <a href="images\pexels-photo-3757942.webp" data-lightbox="image-1"><img class="new-card" src="images\pexels-photo-3757942.webp" alt=""></a>
+                        </div>
+                        <div class="card-title">
+                            <a href="#" class="toggle-info btn">
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </a>
+                            <h5 style="color: green;">Body SPA <br>Massage</h5>
+                            <p>Venue: Mehrauli Delhi</p>
+                        </div>
+                        <div class="card-flap flap1">
+                            <div class="card-description">
+                                We offer therapeutic body spa treatments featuring mineral baths, massages, and aromatherapy to boost holistic wellness and relieve stress among overburdened communities lacking financial access to self-care modalities for renewing mind-body health and
+                                resilience against chronic diseases.</div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://www.facebook.com/mata.sunder.devi.charitable.trust"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/mata-sunder-devi-charitable-trust/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <!-- <a href="#"><i class="fab fa-twitter-square"></i></a> -->
+                </div>
+                <div class="col-md-6 contact">
+                    <h6>Contact us on:</h6>
+                    <a href="">
+                        <h6><i class="fas fa-envelope" style="font-size: smaller; margin-right: 10px;"></i>matasundardevitrust@gmail.com</h6>
+                    </a>
+                    <a href="">
+                        <h6><i class="fas fa-phone-alt" style="font-size: smaller;margin-right: 10px;"></i>+911203456789
+                        </h6>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><i class="fa-regular fa-address-book"></i><br><a href="#">Contact us</a></li>
+                    <li><i class="fa-solid fa-user-doctor"></i><br><a href="#">Our Services</a></li>
+                    <li><i class="fa-solid fa-shield-halved"></i><br><a href="#">Privacy Policy</a></li>
+                    <li><i class="fa-solid fa-building-shield"></i><br><a href="#">Terms & Conditions</a></li>
+                    <li><i class="fa-solid fa-user"></i><br><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="container">
+                    <h6>MATA SUNDER DEVI CHARITABLE TRUST © 2024 | All rights reserved.</h6>
+                </div>
+            </div>
+        </div>
+    </footer>xx
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="lightbox-plus-jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- <script src="lightbox.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            var zindex = 10;
+
+            $("div.card").click(function(e) {
+                e.preventDefault();
+
+                var isShowing = false;
+
+                if ($(this).hasClass("show")) {
+                    isShowing = true
+                }
+
+                if ($("div.cards").hasClass("showing")) {
+                    // a card is already in view
+                    $("div.card.show")
+                        .removeClass("show");
+
+                    if (isShowing) {
+                        // this card was showing - reset the grid
+                        $("div.cards")
+                            .removeClass("showing");
+                    } else {
+                        // this card isn't showing - get in with it
+                        $(this)
+                            .css({
+                                zIndex: zindex
+                            })
+                            .addClass("show");
+
+                    }
+
+                    zindex++;
+
+                } else {
+                    // no cards in view
+                    $("div.cards")
+                        .addClass("showing");
+                    $(this)
+                        .css({
+                            zIndex: zindex
+                        })
+                        .addClass("show");
+
+                    zindex++;
+                }
+
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.list').click(function() {
+                const value = $(this).attr('data-filter');
+                if (value == 'All') {
+                    $('.card').show('1000');
+                } else {
+                    $('.card').not('.' + value).hide('1000');
+                    $('.card').filter('.' + value).show('1000');
+                }
+            })
+        })
+
+        $('.list').click(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    </script>
+</body>
+
+</html>

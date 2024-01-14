@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Contact Us</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+
+    <!--META TAGS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="About The Organization">
+    <meta name="keywords" content="">
+
+    <!--EXTERNAL CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Kanit:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+</head>
+
+<style>
+    .container {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+        width: 768px;
+        max-width: 100%;
+        min-height: 520px;
+        min-width: 370px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .form-container {
+        display: flex;
+    }
+    
+    .left-container {
+        flex: 1;
+        height: 480px;
+        margin-top: 20px;
+        background-color: green;
+    }
+    
+    .right-container {
+        display: flex;
+        flex: 1;
+        height: 460px;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left-container {
+        display: flex;
+        flex: 1;
+        height: 480px;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+    
+    .left-container p {
+        font-size: 0.9rem;
+    }
+    
+    .right-inner-container {
+        width: 70%;
+        height: 80%;
+        text-align: center;
+    }
+    
+    .left-inner-container {
+        height: 50%;
+        width: 80%;
+        text-align: center;
+        line-height: 22px;
+    }
+    
+    input,
+    textarea {
+        background-color: #eee;
+        border: none;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    
+    input:focus,
+    textarea:focus {
+        outline: 1px solid green;
+    }
+    
+    button {
+        border-radius: 20px;
+        border: 1px solid green;
+        background-color: green;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        opacity: 0.7;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .left-container {
+            display: none;
+        }
+        .lg-view {
+            display: none;
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .sm-view {
+            display: none;
+        }
+    }
+    
+    form p {
+        text-align: left;
+    }
+    
+    #Copyright {
+        margin-left: 450px;
+    }
+    
+    @media screen and (max-width:667px) {
+        #Copyright {
+            margin-left: 0%;
+        }
+    }
+    /* @media screen and (max-width:780px){
+        #Copyright{
+            margin-left: 25%;
+        }
+    } */
+</style>
+
+<body>
+
+    <header>
+        <!--NAVIGATION-->
+        <div class="topnav" id="myTopnav">
+            <a href="Index.html" id="logo"><img src="images\Screenshot 2024-01-08 213008.png"></a>
+            <a href="about.html" class="animate" style="font-weight: bold;">About Us</a>
+            <a href="#" class="animate active">Contact Us</a>
+            <a href="team.html" class="animate">Team</a>
+            <a href="#" class="animate">Our Projects</a>
+            <a href="Index.html" class="animate">Home</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    </header>
+
+    <div id="navbar">
+        <a href="Index.html" id="logo"><img src="images\Screenshot 2024-01-08 213008.png"></a>
+        <a href="about.html" class="animate">About Us</a>
+        <a href="#" class="animate active">Contact Us</a>
+        <a href="team.html" class="animate">Team</a>
+        <a href="#" class="animate">Our Projects</a>
+        <a href="Index.html" class="animate">Home</a>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="form-container">
+            <div class="left-container">
+                <div class="left-inner-container">
+                    <h2>We Would Like To Hear From You</h2>
+                    <p>Please submit your information and we will get back to you.</p>
+                    <br>
+                    <p>Call us at +1 231 456 1231</p>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="right-inner-container">
+                    <form action="#">
+                        <h2 class="lg-view">Contact Us</h2>
+                        <p>* Required</p>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f" style="margin-right: 30px; color:#436b95;"></i></a>
+                            <a href="#" class="social"><i class="fab fa-instagram" style="margin-right: 30px; color:#f2003c;"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in" style="margin-right: 30px; color:blue;"></i></a>
+                        </div>
+                        <input type="text" placeholder="Name *" />
+                        <input type="email" placeholder="Email *" />
+                        <input type="phone" placeholder="Phone" />
+                        <textarea rows="4" placeholder="Message"></textarea>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <!-- <a href="#"><i class="fab fa-twitter-square"></i></a> -->
+                </div>
+                <div class="col-md-6 contact">
+                    <h6>Contact us on:</h6>
+                    <a href="">
+                        <h6><i class="fas fa-envelope" style="font-size: smaller; margin-right: 10px;"></i> etviridi@gmail.com</h6>
+                    </a>
+                    <a href="">
+                        <h6><i class="fas fa-phone-alt" style="font-size: smaller; margin-right: 10px"></i>+911203456789</h6>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row" id="Copyright">
+                <div class="container9">
+                    <h6>MATA SUNDER DEVI CHARITABLE TRUST © 2024 | All rights reserved.</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--JAVASCRIPT-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
