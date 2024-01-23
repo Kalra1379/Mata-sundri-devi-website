@@ -1,1 +1,1 @@
-This Medical Ngo Website Made with Javascript for Medical NGO .
+This is Ngo Website Made with Javascript for Mata Sundari Devi tRUST Website  .
